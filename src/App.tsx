@@ -6,6 +6,7 @@ function App() {
     <>
         <div>My React app</div>
         <div>Kitespots 2.0</div>
+        <div>Test github</div>
     </>
   )
 }
