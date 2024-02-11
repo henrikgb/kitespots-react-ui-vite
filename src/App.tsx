@@ -15,7 +15,7 @@ function App() {
     changeLanguage(newLanguage);
   };
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <h1>Kite spots 2.0</h1>
       <h3>
         {t("currentLanguage")}: {t(currentLanguage)}
