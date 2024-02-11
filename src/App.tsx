@@ -17,7 +17,9 @@ function App() {
   return (
     <div>
       <h1>Kite spots 2.0</h1>
-      <h3>{t("currentLanguage")}</h3>
+      <h3>
+        {t("currentLanguage")}: {t(currentLanguage)}
+      </h3>
       <button type={"button"} onClick={handleChangeLanguage}>
         {t("changeLanguage")}
       </button>

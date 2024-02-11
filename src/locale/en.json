@@ -2,6 +2,8 @@
   "translation": {
     "home": "home",
     "changeLanguage": "change language",
-    "currentLanguage": "current language"
+    "currentLanguage": "current language",
+    "nb": "norwegian",
+    "en": "english"
   }
 }
