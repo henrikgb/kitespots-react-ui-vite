@@ -14,8 +14,8 @@ export default {
       colors: {
         headerColor: "#2d728f",
         headerButtonsSelected: "#3b8ea5",
-        webPageBodyBackground: "#f5ee9e",
-        webPageContainerBody: "#f49e4c",
+        webPageBodyBackground: "rgb(254 243 199)",
+        webPageContainerBody: "rgb(253 230 138)",
       },
     },
   },
