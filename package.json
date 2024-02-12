@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
     "@types/prettier": "^3.0.0",
     "eslint-config-prettier": "^9.1.0",
     "i18next": "^23.8.2",
