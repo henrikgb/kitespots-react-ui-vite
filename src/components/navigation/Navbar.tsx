@@ -2,12 +2,13 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import KitespotsLogo from "../../assets/KitespotsLogo.tsx";
+import { useTranslation } from "react-i18next";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
-  { name: "Settings", href: "#", current: false },
+  { name: "home", href: "#", current: true },
+  { name: "about", href: "#", current: false },
+  { name: "contact", href: "#", current: false },
+  { name: "settings", href: "#", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -15,6 +16,8 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+  const { t } = useTranslation();
+
   return (
     <Disclosure as="nav" className="bg-headerColor">
       {({ open }) => (
@@ -52,7 +55,8 @@ export default function Navbar() {
                           )}
                           aria-current={item.current ? "page" : undefined}
                         >
-                          {item.name}
+                          {t(item.name).charAt(0).toUpperCase()}
+                          {t(item.name).slice(1).toLowerCase()}
                         </a>
                       ))}
                     </div>
@@ -101,7 +105,7 @@ export default function Navbar() {
                               "block px-4 py-2 text-sm text-gray-700 hover:bg-webPageBodyBackground",
                             )}
                           >
-                            Sign in to admin page
+                            {t("signInToAdminPage")}
                           </a>
                         )}
                       </Menu.Item>
@@ -127,7 +131,8 @@ export default function Navbar() {
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
-                  {item.name}
+                  {t(item.name).charAt(0).toUpperCase()}
+                  {t(item.name).slice(1).toLowerCase()}
                 </Disclosure.Button>
               ))}
             </div>

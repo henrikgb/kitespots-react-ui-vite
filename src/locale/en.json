@@ -1,6 +1,10 @@
 {
   "translation": {
     "home": "home",
+    "about": "about",
+    "contact": "contact",
+    "settings": "settings",
+    "signInToAdminPage": "Sign in to admin page",
     "changeLanguage": "change language",
     "currentLanguage": "current language",
     "nb": "norwegian",
