@@ -1,11 +1,13 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import enJSON from "./locale/en.json";
-import nbJSON from "./locale/nb.json";
+import englishTranslation from "./locale/english/translation.json";
+import norwegianTranslation from "./locale/norwegian/translation.json";
 i18n.use(initReactI18next).init({
   resources: {
-    en: { ...enJSON },
-    nb: { ...nbJSON },
+    en: { ...englishTranslation },
+    nb: { ...norwegianTranslation },
   },
   lng: "en",
 });
+
+export default i18n;
