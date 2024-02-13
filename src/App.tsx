@@ -1,35 +1,22 @@
 import "./App.css";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navigation/Navbar.tsx";
+import { LandingPage } from "./components/pages/landingPage/LandingPage.tsx";
+import { AboutPage } from "./components/pages/aboutPage/AboutPage.tsx";
+import { ContactPage } from "./components/pages/contactPage/ContactPage.tsx";
+import { SettingsPage } from "./components/pages/settingsPage/SettingsPage.tsx";
 
 function App() {
-  const {
-    t,
-    i18n: { changeLanguage, language },
-  } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState<string>(language);
-
-  const handleChangeLanguage = () => {
-    const newLanguage = currentLanguage === "en" ? "nb" : "en";
-    setCurrentLanguage(newLanguage);
-    changeLanguage(newLanguage);
-  };
   return (
-    <div>
+    <Router>
       <Navbar />
-      <div className="w-full flex justify-center">
-        <div className="flex flex-col gap-2 min-w-[1260px] max-w-[1260px] ">
-          <h1>Kite spots 2.0</h1>
-          <h3>
-            {t("currentLanguage")}: {t(currentLanguage)}
-          </h3>
-          <button type={"button"} onClick={handleChangeLanguage}>
-            {t("changeLanguage")}
-          </button>
-        </div>
-      </div>
-    </div>
+      <Routes>
+        <Route path={"/"} element={<LandingPage />} />
+        <Route path={"/about"} element={<AboutPage />} />
+        <Route path={"/contact"} element={<ContactPage />} />
+        <Route path={"/settings"} element={<SettingsPage />} />
+      </Routes>
+    </Router>
   );
 }
 

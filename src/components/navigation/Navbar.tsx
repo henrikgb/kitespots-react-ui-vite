@@ -3,12 +3,13 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import KitespotsLogo from "../../assets/KitespotsLogo.tsx";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 const navigation = [
-  { name: "home", href: "#", current: true },
-  { name: "about", href: "#", current: false },
-  { name: "contact", href: "#", current: false },
-  { name: "settings", href: "#", current: false },
+  { name: "home", href: "/", current: false },
+  { name: "about", href: "/about", current: false },
+  { name: "contact", href: "/contact", current: false },
+  { name: "settings", href: "/settings", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -17,6 +18,12 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   const { t } = useTranslation();
+  const location = useLocation();
+
+  // Update current property of navigation items based on current URL
+  navigation.forEach((item) => {
+    item.current = item.href === location.pathname;
+  });
 
   return (
     <Disclosure as="nav" className="bg-headerColor">
