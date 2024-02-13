@@ -12,18 +12,18 @@ export const LandingPage = () => {
     const newLanguage = currentLanguage === "en" ? "nb" : "en";
     setCurrentLanguage(newLanguage);
     changeLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
   };
+
   return (
-    <div className="w-full flex justify-center">
-      <div className="flex flex-col gap-2 min-w-[1260px] max-w-[1260px] ">
-        <h1>Kite spots 2.0</h1>
-        <h3>
-          {t("currentLanguage")}: {t(currentLanguage)}
-        </h3>
-        <button type={"button"} onClick={handleChangeLanguage}>
-          {t("changeLanguage")}
-        </button>
-      </div>
+    <div className="flex flex-col gap-2">
+      <h1>Kite spots 2.0</h1>
+      <h3>
+        {t("currentLanguage")}: {t(currentLanguage)}
+      </h3>
+      <button type={"button"} onClick={handleChangeLanguage}>
+        {t("changeLanguage")}
+      </button>
     </div>
   );
 };
