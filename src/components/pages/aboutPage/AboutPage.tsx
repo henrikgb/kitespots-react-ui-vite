@@ -20,9 +20,7 @@ export const AboutPage = () => {
   return (
     <div className="flex flex-col gap-12">
       <div className="w-full flex justify-center">
-        <div className="max-w-[650px]">
-          <p className={"font-bold text-2xl"}>{t("aboutPageHeader")}</p>
-        </div>
+        <h2>{t("aboutPageHeader")}</h2>
       </div>
       <div className="w-fit flex justify-start">
         <Paper>
@@ -42,7 +40,11 @@ export const AboutPage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={githubLogo} alt="Github logo"></img>
+              <img
+                src={githubLogo}
+                alt="Github logo"
+                style={{ height: 160 }}
+              ></img>
             </a>
           </BoxFlexRow>
         </Paper>
