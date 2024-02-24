@@ -1,0 +1,46 @@
+.beachInfoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5rem/* 80px */;
+}
+
+@media (max-width: 1500px) {
+    .beachInfoContainer{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) {
+    .beachInfoContainer{
+        gap: 1rem;
+    }
+}
+
+
+.textList li{
+    white-space: nowrap;
+    text-align: start;
+}
+
+.textList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.textList li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.square {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 10px;
+    position: absolute;
+    top: 4px;
+    left: -20px; /* Adjust the positioning as needed */
+}
