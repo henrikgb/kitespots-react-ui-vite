@@ -61,18 +61,18 @@ export const SettingsPage = () => {
           <Button
             variant="filled"
             placeholder=""
-            onClick={() => switchLanguage("nb")}
-            color={norwegianButtonColor}
-          >
-            {t("norwegian")}
-          </Button>
-          <Button
-            variant="filled"
-            placeholder=""
             onClick={() => switchLanguage("en")}
             color={englishButtonColor}
           >
             {t("english")}
+          </Button>
+          <Button
+            variant="filled"
+            placeholder=""
+            onClick={() => switchLanguage("nb")}
+            color={norwegianButtonColor}
+          >
+            {t("norwegian")}
           </Button>
         </div>
       </CardBody>
