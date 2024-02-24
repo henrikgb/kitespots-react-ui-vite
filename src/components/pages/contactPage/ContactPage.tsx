@@ -7,7 +7,7 @@ export const ContactPage = () => {
   const email = "henrik.busengdal@kitespots.no";
 
   return (
-    <Card className="mt-6 w-full h-full bg-webPageContainerBody">
+    <Card className="mt-6 w-full bg-webPageContainerBody">
       <CardHeader
         color="blue-gray"
         className="flex h-full justify-center items-center"

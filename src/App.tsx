@@ -13,8 +13,11 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <Router>
         <Navbar />
-        <div className="w-full flex justify-center p-5">
-          <div className="w-full max-w-[1260px]">
+        <div
+          className="w-full flex justify-center p-5"
+          style={{ minHeight: "calc(100vh - 64px)" }}
+        >
+          <div className="w-full max-w-[1260px] overflow-y-auto">
             <Routes>
               <Route path={"/"} element={<LandingPage />} />
               <Route path={"/about"} element={<AboutPage />} />
