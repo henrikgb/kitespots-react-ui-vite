@@ -1,0 +1,32 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.mapAndImageContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(50vh - 64px);
+    background-color: rosybrown;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherForecastContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(50vh - 64px);
+    background-color: cadetblue;
+    justify-content: center;
+    align-items: center;
+}
+
+.childContainer{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,29 +1,19 @@
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import styleClasses from "../landingPage/LandingPage.module.css";
+import { Paper } from "../../Paper.tsx";
 
 export const LandingPage = () => {
-  const {
-    t,
-    i18n: { changeLanguage, language },
-  } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState<string>(language);
-
-  const handleChangeLanguage = () => {
-    const newLanguage = currentLanguage === "en" ? "nb" : "en";
-    setCurrentLanguage(newLanguage);
-    changeLanguage(newLanguage);
-    localStorage.setItem("language", newLanguage);
-  };
-
   return (
-    <div className="flex flex-col gap-2">
-      <h1>Kite spots 2.0</h1>
-      <h3>
-        {t("currentLanguage")}: {t(currentLanguage)}
-      </h3>
-      <button type={"button"} onClick={handleChangeLanguage}>
-        {t("changeLanguage")}
-      </button>
+    <div className={`${styleClasses.body}`}>
+      <div className={`${styleClasses.mapAndImageContainer}`}>
+        <div className={`${styleClasses.childContainer}`}>
+          <Paper width="w-full">Kart</Paper>
+        </div>
+        <div className={`${styleClasses.childContainer}`}>Bilde</div>
+      </div>
+      <div className={`${styleClasses.weatherForecastContainer}`}>
+        <div className={`${styleClasses.childContainer}`}>vind</div>
+        <div className={`${styleClasses.childContainer}`}>vindretning</div>
+      </div>
     </div>
   );
 };
