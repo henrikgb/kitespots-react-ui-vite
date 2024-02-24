@@ -15,7 +15,9 @@ export const BeachInfo = () => {
           className={"flex justify-center font-bold text-3xl w-fit"}
           style={{ borderBottom: "solid black" }}
         >
-          {nameId}
+          {nameId
+            ? nameId.charAt(0).toUpperCase() + nameId.slice(1).toLowerCase()
+            : ""}
         </p>
       </div>
       <div className="flex justify-center">
