@@ -6,7 +6,7 @@ import {
   WindDirection10ms,
   WindGusts10ms,
   WindSpeed10ms,
-} from "../model/MeteomaticsWeatherData.ts";
+} from "../types/model/MeteomaticsWeatherData.ts";
 
 interface MeteomaticsWeatherDataState {
   meteomaticsData: MeteomaticsWeatherData[];
